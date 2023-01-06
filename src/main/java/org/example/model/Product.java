@@ -1,4 +1,4 @@
-package ORG.EXAMPLE.model;
+package org.example.model;
 
 import lombok.Data;
 

@@ -1,9 +1,9 @@
-package ORG.EXAMPLE;
+package org.example;
 
-import ORG.EXAMPLE.model.NotifiableProduct;
-import ORG.EXAMPLE.model.Product;
-import ORG.EXAMPLE.model.ProductBundle;
-import ORG.EXAMPLE.utils.ProductUtils;
+import org.example.model.NotifiableProduct;
+import org.example.model.Product;
+import org.example.model.ProductBundle;
+import org.example.utils.ProductUtils;
 
 import java.util.ArrayList;
 import java.util.List;

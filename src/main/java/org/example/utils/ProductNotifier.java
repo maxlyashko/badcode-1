@@ -1,12 +1,12 @@
-package ORG.EXAMPLE.utils;
+package org.example.utils;
 
-import ORG.EXAMPLE.model.NotifiableProduct;
-import ORG.EXAMPLE.model.ProductBundle;
+import org.example.model.NotifiableProduct;
+import org.example.model.ProductBundle;
 
 import java.util.List;
 
-public class SendNotificationsForFilteredNotifiableProducts {
-    public static int SendNotifications ( List<NotifiableProduct> products ) {
+public class ProductNotifier {
+    public static int sendNotifications ( List<NotifiableProduct> products ) {
         int notifications = 0;
         for (NotifiableProduct product : products) {
             if (product instanceof ProductBundle) {
