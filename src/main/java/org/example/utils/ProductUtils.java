@@ -11,8 +11,8 @@ import java.util.Random;
 public class ProductUtils {
     private static final ProductRepository productRepository = new ProductRepository ( );
 
-    public static List<NotifiableProduct> filterNotifiableProducts () {
-        return productRepository.getAll ( ).stream ( ).filter ( it -> it instanceof NotifiableProduct ).map ( it -> (NotifiableProduct) it ).toList ( );
+    public List<NotifiableProduct> filterNotifiableProducts (List<Product> products) {
+        return products.stream ( ).filter ( it -> it instanceof NotifiableProduct ).map ( it -> (NotifiableProduct) it ).toList ( );
     }
 
     public void saveNotifiableProduct ( NotifiableProduct product ) {
@@ -23,17 +23,13 @@ public class ProductUtils {
         productRepository.save ( product );
     }
 
-    public int filterNotifiableProductsAndSendNotifications () {
-        return ProductNotifier.sendNotifications ( filterNotifiableProducts ( ) );
-    }
-
     public List<Product> getAll () {
         return productRepository.getAll ( );
     }
 
     public Product generateRandomProduct () {
         Random random = new Random ( );
-        if (random.nextBoolean ( )) {
+        if (random.nextBoolean ( ) ) {
             return ProductGenerator.generateProductBundle ( );
         } else {
             return ProductGenerator.generateNotifiableProduct ( );
