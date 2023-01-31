@@ -2,7 +2,6 @@ package org.example.utils;
 
 import org.example.model.NotifiableProduct;
 import org.example.model.Product;
-import org.example.model.ProductBundle;
 import org.example.repository.ProductRepository;
 
 import java.util.List;
@@ -13,14 +12,6 @@ public class ProductUtils {
 
     public List<NotifiableProduct> filterNotifiableProducts (List<Product> products) {
         return products.stream ( ).filter ( it -> it instanceof NotifiableProduct ).map ( it -> (NotifiableProduct) it ).toList ( );
-    }
-
-    public void saveNotifiableProduct ( NotifiableProduct product ) {
-        productRepository.save ( product );
-    }
-
-    public void saveProductBundle ( ProductBundle product ) {
-        productRepository.save ( product );
     }
 
     public List<Product> getAll () {

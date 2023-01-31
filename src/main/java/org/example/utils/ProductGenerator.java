@@ -23,7 +23,6 @@ public class ProductGenerator {
         ProductBundle productBundle = new ProductBundle ( );
         productBundle.setAmount ( random.nextInt ( 15 ) );
         productBundle.setAvailable ( random.nextBoolean ( ) );
-        productBundle.setChannel ( random.nextBoolean ( ) + "" + random.nextDouble ( ) );
         productBundle.setPrice ( random.nextDouble ( ) );
         productBundle.setId ( random.nextLong ( ) );
         productBundle.setTitle ( random.nextFloat ( ) + "" + random.nextDouble ( ) );
